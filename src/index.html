@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bean Tzu - The Art of Deal</title>
     <link rel="stylesheet" href="style.css">
+    <script src="quotes.js" defer></script>
     <!-- Placeholder for favicon and logo -->
 </head>
 <body>
@@ -12,9 +13,15 @@
         <h1>Bean Tzu - The Art of Deal</h1>
     </header>
     <main>
-        <section id="quote-section">
-            <!-- Random quote will go here -->
+        <section id="quote-section" style="margin-bottom:1.5rem; font-size:1.2em;">
+            <!-- Random quote will appear here -->
         </section>
+        <button id="refresh-quote" style="display:block; margin:0 auto 2rem auto;">Refresh Quote</button>
+    <script>
+        document.getElementById('refresh-quote').onclick = function() {
+            if (typeof showRandomQuote === 'function') showRandomQuote();
+        };
+    </script>
         <section id="cta-section">
             <!-- Call to action will go here -->
         </section>
