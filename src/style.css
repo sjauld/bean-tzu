@@ -1,0 +1,26 @@
+/* Basic layout for Bean Tzu - The Art of Deal */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    background: #f7f7f7;
+    color: #222;
+}
+header {
+    background: #3e2723;
+    color: #fff;
+    padding: 2rem 0 1rem 0;
+    text-align: center;
+}
+main {
+    max-width: 600px;
+    margin: 2rem auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    padding: 2rem;
+}
+footer {
+    text-align: center;
+    color: #888;
+    margin: 2rem 0 1rem 0;
+}
