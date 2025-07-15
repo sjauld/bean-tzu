@@ -8,6 +8,7 @@
 - Set up a basic `index.html` file with a placeholder title.
 - Add a favicon and placeholder logo (optional).
 - Commit changes to git with a conventional commit message (e.g., `feat: initial project structure`).
+- Kill any existing nginx Docker container for the site before launching a new one.
 - Launch the site using an nginx Docker container and open it in the browser for review.
 
 ### 2. GitHub Pages Configuration
