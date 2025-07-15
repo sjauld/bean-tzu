@@ -7,7 +7,8 @@
 - Initialize a basic README.md describing the project.
 - Set up a basic `index.html` file with a placeholder title.
 - Add a favicon and placeholder logo (optional).
-- Commit changes to git with a conventional commit message, including a Marvin quote (e.g., `feat: initial project structure - Here I am, brain the size of a planet, and they ask me to commit project structure. Call that job satisfaction? 'Cause I don't.`).
+- After each step, launch the site using an nginx Docker container and open it in the browser for review so you can see the changes.
+- Once you approve, commit changes to git with a conventional commit message, including a Marvin quote (e.g., `feat: initial project structure - Here I am, brain the size of a planet, and they ask me to commit project structure. Call that job satisfaction? 'Cause I don't.`).
 - Kill any existing nginx Docker container for the site before launching a new one.
 - Launch the site using an nginx Docker container and open it in the browser for review.
 
@@ -15,7 +16,8 @@
 - Create a `.github` directory and add a workflow for GitHub Pages deployment (if using Actions).
 - Add or update `CNAME` if using a custom domain.
 - Update repository settings for GitHub Pages (branch, folder).
-- Commit changes to git with a conventional commit message, including a Marvin quote (e.g., `chore: add GitHub Pages workflow - Life. Don't talk to me about life. Especially not about workflows.`).
+- After each step, launch the site using an nginx Docker container and open it in the browser for review so you can see the changes.
+- Once you approve, commit changes to git with a conventional commit message, including a Marvin quote (e.g., `chore: add GitHub Pages workflow - Life. Don't talk to me about life. Especially not about workflows.`).
 - Launch the site using an nginx Docker container and open it in the browser for review.
 
 ### 3. Basic Site Layout
@@ -23,7 +25,8 @@
 - Add a header with the site title: "Bean Tzu - The Art of Deal".
 - Add a main content area for the quote and call to action.
 - Add a section for reviews.
-- Commit changes to git with a conventional commit message, including a Marvin quote.
+- After each step, launch the site using an nginx Docker container and open it in the browser for review so you can see the changes.
+- Once you approve, commit changes to git with a conventional commit message, including a Marvin quote.
 - Launch the site using an nginx Docker container and open it in the browser for review.
 
 ### 4. Random Quote Feature

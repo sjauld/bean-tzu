@@ -1,3 +1,22 @@
+/* Reviews section styles */
+#reviews-section {
+    margin-top: 2rem;
+}
+.review-card {
+    background: #f3e5f5;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    padding: 1.2em 1.5em;
+    margin-bottom: 1.2em;
+    font-size: 1em;
+    color: #3e2723;
+}
+.review-source {
+    font-weight: bold;
+    color: #6a1b9a;
+    margin-top: 0.5em;
+    display: block;
+}
 /* Basic layout for Bean Tzu - The Art of Deal */
 body {
     font-family: 'Segoe UI', Arial, sans-serif;

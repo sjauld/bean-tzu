@@ -22,11 +22,46 @@
             if (typeof showRandomQuote === 'function') showRandomQuote();
         };
     </script>
-        <section id="cta-section">
-            <!-- Call to action will go here -->
+        <section id="cta-section" style="margin-bottom:2rem; text-align:center;">
+            <button id="buy-book" style="background:#3e2723;color:#fff;padding:1em 2em;border:none;border-radius:6px;font-size:1.1em;cursor:pointer;">Buy the Book</button>
         </section>
+    <script>
+        document.getElementById('refresh-quote').onclick = function() {
+            if (typeof showRandomQuote === 'function') showRandomQuote();
+        };
+        document.getElementById('buy-book').onclick = function() {
+            window.open('https://example.com/buy-bean-tzu', '_blank');
+        };
+    </script>
         <section id="reviews-section">
-            <!-- Reviews will go here -->
+            <div class="review-card">
+                "Bean Tzu is a masterful blend of ancient wisdom and modern accounting. A must-read for every strategist."<br>
+                <span class="review-source">— The Mew York Times</span>
+            </div>
+            <div class="review-card">
+                "The proletariat will seize the means of reconciliation. Bean Tzu is the red ledger of revolution!"<br>
+                <span class="review-source">— Mewskovskaya Pravda</span>
+            </div>
+            <div class="review-card">
+                "From the heart of Paris, Bean Tzu brings a nouvelle vague of fiscal wisdom. C'est magnifique!"<br>
+                <span class="review-source">— Le Mewnde (Paris)</span>
+            </div>
+            <div class="review-card">
+                "Bean Tzu: The only book to ever make the city of Mewlbourne care about balance sheets."<br>
+                <span class="review-source">— The Mewlbourne Ledger</span>
+            </div>
+            <div class="review-card">
+                "Numbers, strategy, and a dash of feline cunning. Bean Tzu is the pride of Mewcago."<br>
+                <span class="review-source">— The Mewcago Tribune</span>
+            </div>
+            <div class="review-card">
+                "Bean Tzu is the only book we recommend for both capitalists and comrades. Read it before your next audit."<br>
+                <span class="review-source">— The Mew Berlin Review</span>
+            </div>
+            <div class="review-card">
+                "Bean Tzu: The art of war, the art of deal, and the art of the purr. Essential reading for every Mew Yorker."<br>
+                <span class="review-source">— The New Mew Yorker</span>
+            </div>
         </section>
     </main>
     <footer>
