@@ -1,6 +1,6 @@
 # PLAN.md
 
-## Bean Tzu - The Art of #Deal: Static Website Build Plan
+## Bean - The Art of the #Deal: Static Website Build Plan
 
 ### 1. Project Setup
 
@@ -25,7 +25,7 @@
 ### 3. Basic Site Layout
 
 - Design a simple, modern layout using HTML and CSS.
-- Add a header with the site title: "Bean Tzu - The Art of #Deal".
+- Add a header with the site title: "Bean - The Art of the #Deal".
 - Add a main content area for the quote and call to action.
 - Add a section for reviews.
 - After each step, launch the site using an nginx Docker container and open it in the browser for review so you can see the changes.

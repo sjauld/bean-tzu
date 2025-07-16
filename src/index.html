@@ -25,7 +25,7 @@
 </head>
 <body>
     <header>
-        <h1 id="site-title" style="text-align:center;color:#fff;background:#3e2723;padding:0.5em 0 0.4em 0;border-radius:8px;font-size:2.2em;letter-spacing:0.04em;">Bean - The Art of the #Deal</h1>
+        <h1 id="site-title" style="text-align:center;color:#fff;background:#3e2723;padding:0.5em 0 0.4em 0;border-radius:8px;font-size:2.2em;letter-spacing:0.04em;font-family:'Georgia',serif;font-weight:bold;text-transform:uppercase;">Bean - The Art of the #Deal</h1>
     </header>
     <main>
         <img src="assets/bean.jpg" alt="A stylized bean with a wise expression, representing Bean" style="display:block;width:100%;max-width:340px;margin:0 auto 2.2rem auto;object-fit:cover;border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,0.09);">
@@ -38,6 +38,25 @@
         document.getElementById('quote-section').onclick = function() {
             if (typeof showRandomQuote === 'function') showRandomQuote();
         };
+        
+        // Auto-cycle quotes every 5 seconds with fade animation
+        let autoQuoteInterval;
+        function startAutoQuotes() {
+            if (typeof showRandomQuote === 'function') {
+                showRandomQuote(); // Show initial quote
+                autoQuoteInterval = setInterval(() => {
+                    const quoteEl = document.getElementById('quote-section');
+                    quoteEl.style.opacity = '0';
+                    setTimeout(() => {
+                        showRandomQuote();
+                        quoteEl.style.opacity = '1';
+                    }, 300);
+                }, 5000);
+            }
+        }
+        
+        // Start auto-quotes when page loads
+        window.addEventListener('load', startAutoQuotes);
     </script>
     <script>
         // Konami code: up up down down left right left right b a

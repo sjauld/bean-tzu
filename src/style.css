@@ -138,6 +138,34 @@ main {
     font-style: italic;
     color: #6a1b9a;
     margin-bottom: 1.5rem;
+    transition: opacity 0.3s ease-in-out;
+    position: relative;
+}
+
+#quote-section::before {
+    content: '"';
+    font-size: 4em;
+    color: #6a1b9a;
+    opacity: 0.3;
+    position: absolute;
+    left: -0.8em;
+    top: -0.2em;
+    font-family: "Times New Roman", "Georgia", serif;
+    line-height: 1;
+    font-style: italic;
+}
+
+#quote-section::after {
+    content: '"';
+    font-size: 4em;
+    color: #6a1b9a;
+    opacity: 0.3;
+    position: absolute;
+    right: -0.8em;
+    bottom: -0.6em;
+    font-family: "Times New Roman", "Georgia", serif;
+    line-height: 1;
+    font-style: italic;
 }
 #refresh-quote {
     background: #6a1b9a;

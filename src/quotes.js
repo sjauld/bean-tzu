@@ -1,4 +1,4 @@
-// Bean Tzu - The Art of #Deal: Random Quote Feature
+// Bean - The Art of the #Deal: Random Quote Feature
 const quotes = [
     // Sfos originals
     "In the ledger of war, know your own assets and your enemy's liabilities. For victory is assured not by force alone, but by balancing every debit against your foe's defeat.",
