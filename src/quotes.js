@@ -1,6 +1,9 @@
-// Bean Tzu - The Art of Deal: Random Quote Feature
+// Bean Tzu - The Art of #Deal: Random Quote Feature
 const quotes = [
+    // Sfos originals
     "In the ledger of war, know your own assets and your enemy's liabilities. For victory is assured not by force alone, but by balancing every debit against your foe's defeat.",
+    "A wise general hides gold where the emperor’s auditors cannot see; for unseen profit funds unseen conquest.",
+    // ChatGPT generated
     "Opportunities multiply as they are audited. A wise general reconciles every transaction before advancing.",
     "The greatest victory is that which requires no write-off. Let your balance sheet be stronger than your adversary’s.",
     "All warfare is based on cost allocation. To win, ensure your resources are efficiently deployed and your expenses minimized.",

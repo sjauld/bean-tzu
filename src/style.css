@@ -1,3 +1,231 @@
+/* Money rain animation for Konami code */
+#money-rain {
+  pointer-events: none;
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  z-index: 2000;
+}
+.money-bill {
+  position: absolute;
+  top: -60px;
+  width: 48px;
+  height: 24px;
+  background: linear-gradient(90deg, #c8b560 60%, #7c6f2a 100%);
+  border: 2px solid #7c6f2a;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.13);
+  animation: money-fall-rot 4.5s cubic-bezier(.23,1.02,.47,.98) forwards;
+  background-image: url('data:image/svg+xml;utf8,<svg width="48" height="24" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="24" rx="6" fill="%23c8b560" stroke="%237c6f2a" stroke-width="2"/><text x="24" y="16" font-size="12" text-anchor="middle" fill="%237c6f2a" font-family="Arial">$</text></svg>');
+  background-size: cover;
+  opacity: 0.93;
+  transform: rotate(var(--bill-rot, 0deg));
+}
+@keyframes money-fall-rot {
+  0% { transform: translateY(0) rotate(var(--bill-rot, 0deg)); opacity: 0.7; }
+  30% { opacity: 1; }
+  60% { transform: translateY(60vh) rotate(calc(var(--bill-rot, 0deg) + 180deg)); }
+  100% { transform: translateY(100vh) rotate(calc(var(--bill-rot, 0deg) + 360deg)); opacity: 0; }
+}
+.money-coin {
+  position: absolute;
+  top: -32px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #ffe066 80%, #bfa600 100%);
+  border: 2px solid #bfa600;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.13);
+  animation: coin-fall-spin 4.5s cubic-bezier(.23,1.02,.47,.98) forwards;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.95;
+}
+.money-coin::before {
+  content: '$';
+  color: #bfa600;
+  font-size: 1.2em;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  text-shadow: 0 1px 2px #fff8, 0 0 6px #fff6;
+}
+@keyframes coin-fall-spin {
+  0% { transform: translateY(0) rotateY(0deg) scale(1); opacity: 0.7; }
+  30% { opacity: 1; }
+  60% { transform: translateY(60vh) rotateY(180deg) scale(1.1); }
+  100% { transform: translateY(100vh) rotateY(360deg) scale(1); opacity: 0; }
+}
+.coin-sparkle {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #fff 60%, #ffe066 100%);
+  opacity: 0.85;
+  animation: sparkle-fade 1.2s linear infinite;
+}
+@keyframes sparkle-fade {
+  0% { opacity: 0.7; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.3); }
+  100% { opacity: 0.7; transform: scale(1); }
+}
+/* Modal styles for Rick Roll */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background: rgba(0,0,0,0.7);
+  align-items: center;
+  justify-content: center;
+}
+.modal[style*="display: block"] {
+  display: flex !important;
+}
+.modal-content {
+  background: #fff;
+  margin: auto;
+  padding: 1.5em 1em 1em 1em;
+  border-radius: 10px;
+  max-width: 560px;
+  width: 95vw;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.25);
+  position: relative;
+}
+.close-modal {
+  position: absolute;
+  top: 0.5em;
+  right: 0.7em;
+  background: none;
+  border: none;
+  font-size: 2em;
+  color: #6a1b9a;
+  cursor: pointer;
+  z-index: 10;
+}
+/* Improved styling and responsiveness for Bean Tzu site */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    background: linear-gradient(135deg, #f7f7f7 60%, #e1bee7 100%);
+    color: #222;
+}
+header {
+    background: #3e2723;
+    color: #fff;
+    padding: 2rem 0 1rem 0;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(62,39,35,0.08);
+}
+header h1 {
+    font-size: 2.2em;
+    letter-spacing: 0.04em;
+    margin: 0;
+}
+main {
+    max-width: 700px;
+    margin: 2rem auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.09);
+    padding: 2rem 2.5rem;
+}
+#quote-section {
+    font-style: italic;
+    color: #6a1b9a;
+    margin-bottom: 1.5rem;
+}
+#refresh-quote {
+    background: #6a1b9a;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 0.7em 1.5em;
+    font-size: 1em;
+    cursor: pointer;
+    margin-bottom: 2rem;
+    transition: background 0.2s;
+}
+#refresh-quote:hover {
+    background: #8e24aa;
+}
+#cta-section button {
+    background: #3e2723;
+    color: #fff;
+    padding: 1em 2em;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1em;
+    cursor: pointer;
+    box-shadow: 0 1px 4px rgba(62,39,35,0.08);
+    transition: background 0.2s;
+}
+#cta-section button:hover {
+    background: #5d4037;
+}
+#reviews-section {
+    margin-top: 2rem;
+}
+.review-card {
+    background: #f3e5f5;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    padding: 1.2em 1.5em;
+    margin-bottom: 1.2em;
+    font-size: 1em;
+    color: #3e2723;
+    border-left: 5px solid #6a1b9a;
+}
+.review-source {
+    font-weight: bold;
+    color: #6a1b9a;
+    margin-top: 0.5em;
+    display: block;
+}
+footer {
+    text-align: center;
+    color: #888;
+    margin: 2rem 0 1rem 0;
+    font-size: 0.95em;
+}
+@media (max-width: 700px) {
+    main {
+        max-width: 98vw;
+        padding: 1rem;
+    }
+    .review-card {
+        font-size: 0.95em;
+        padding: 1em;
+    }
+    header h1 {
+        font-size: 1.5em;
+    }
+    #cta-section button {
+        font-size: 1em;
+        padding: 0.8em 1.2em;
+    }
+}
+@media (max-width: 700px) {
+    main {
+        max-width: 98vw;
+        padding: 1rem;
+    }
+    .review-card {
+        font-size: 0.95em;
+        padding: 1em;
+    }
+    header h1 {
+        font-size: 1.5em;
+    }
+    #cta-section button {
+        font-size: 1em;
+        padding: 0.8em 1.2em;
+    }
+}
 /* Reviews section styles */
 #reviews-section {
     margin-top: 2rem;
@@ -17,7 +245,7 @@
     margin-top: 0.5em;
     display: block;
 }
-/* Basic layout for Bean Tzu - The Art of Deal */
+/* Basic layout for Bean Tzu - The Art of #Deal */
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
     margin: 0;
